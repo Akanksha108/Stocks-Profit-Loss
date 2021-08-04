@@ -9,25 +9,28 @@
 </head>
 <body>
    <div id="stocks">
-        <h1>Check Profit/Loss on your Stock</h1>
-
+       <div class="stock_img">
+        <img src="./images/pexels-george-morina-4960464.jpg" id="hero_img" />
+       </div>
+        
         <div class="form_for_stocks">
+            <h1>Check Profit/Loss on your Stock</h1>
             <form id="stocks_form">
-                <input type="number" id="purchase_price" required />
+                <input type="number" id="purchase_price" placeholder="Enter purchase price" required />
                 <label for="purchase_price">Purchase Price</label><br>
 
-                <input type="number" id="stock_quantity" required />
+                <input type="number" id="stock_quantity" placeholder="Enter stock quantity" required />
                 <label for="stock_quantity">Stock Quantity</label><br>
 
-                <input type="number" id="current_price" required />
+                <input type="number" id="current_price" placeholder="Enter current price" required />
                 <label for="current_price">Current Price</label><br>
 
                 <button type="submit" id="submit_btn">Check</button><br>
             </form>
         </div>
-            <p id="output"></p>
-
    </div> 
+
+   <p id="output"></p>
 
    <script src="script.js"></script>
 </body>
