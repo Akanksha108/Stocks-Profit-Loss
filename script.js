@@ -27,22 +27,27 @@ submitBtn.addEventListener("click", function(event){
 
         let profitPercent = ((profit/purchasePriceValue) * 100).toFixed(2);
 
-        output.style.border = "2px";
+        // Added Styles to output
+        output.style.border = "2px solid #064E3B";
         output.style.background = "linear-gradient(to right, #00D956, #0468CD)";
         output.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 30px 90px";
        
-
         output.innerHTML =`You have gained ${profitPercent}% .You have made a total profit of ₹${profit}`;
 
-        stocksBackground.style.backgroundImage = "url('./images/celebration1_gif.gif')";
+        if(profitPercent > 50){
+            stocksBackground.style.backgroundImage = "url('./images/celebration1_gif.gif')";
 
+            output.innerHTML =`You have gained ${profitPercent}% .You have made a total profit of ₹${profit}`;
+        }
     }
     else{
         let loss = purchasePriceValue - currentPriceValue;
 
         let lossPercent = ((loss/purchasePriceValue) * 100).toFixed(2);
 
-        output.style.border = "2px solid black";
+        output.style.border = "2px solid #064E3B";
+        output.style.background = "linear-gradient(to right, #00D956, #0468CD)";
+        output.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 30px 90px";
 
         output.innerHTML =`You lost ${lossPercent}%. Your total loss is ₹${loss}`;
 
@@ -53,7 +58,11 @@ submitBtn.addEventListener("click", function(event){
 
             stocksBackground.style.backgroundSize = "cover";
 
-            output.style.border = "2px solid white";
+            output.style.border = "2px solid #064E3B";
+
+            output.style.background = "black";
+
+            output.style.color = "white";
 
             output.innerHTML =`You lost ${lossPercent}%. Your total loss is ₹${loss}`;
 
