@@ -10,6 +10,24 @@ body{
 
 #stocks{
     min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stock_img{
+    width: 50%;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.form_for_stocks{
+    width: 40%;
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.form_for_stocks h1{
+    font-size: 38px;
 }
 
 input, label{
@@ -27,14 +45,27 @@ label{
     font-size: large;
 }
 
+#hero_img{
+    width: 80%;
+    height: 80vh;
+    padding: 30px;
+    margin: 10px;
+}
+
 #submit_btn{
-    width: 10%;
+    width: 15%;
     height: 7vh;
     font-weight: bold;
     margin: 20px;
     margin-bottom: 0;
     border-radius: 10px;
     font-size: 1rem;
+    cursor: pointer;
+}
+
+#submit_btn:hover{
+    background-color: black;
+    color: white;
 }
 
 #output{
@@ -42,6 +73,11 @@ label{
     font-size: 1.5rem;
     padding-top: 40px;
     color: black;
+    width: 50%;
+    padding: 20px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
 }
 
 @media screen and (max-width:360px) {
