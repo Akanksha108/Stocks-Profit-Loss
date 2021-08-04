@@ -6,6 +6,13 @@ const currentPrice = document.getElementById("current_price");
 
 let submitBtn = document.getElementById("submit_btn");
 
+let output = document.getElementById("output");
+
+let stocksBackground = document.getElementById("stocks");
+
+function celebration(){
+    document.body.style.backgroundImage = "url('./images/pexels-olya-kobruseva-5386754.jpg'}";
+}
 
 submitBtn.addEventListener("click", function(event){
 
@@ -18,12 +25,27 @@ submitBtn.addEventListener("click", function(event){
     if(currentPriceValue > purchasePriceValue){
         let profit = currentPriceValue - purchasePriceValue;
 
-        console.log(`You have made a profit of Rs.${profit}`);
+        let profitPercent = ((profit/purchasePriceValue) * 100).toFixed(2);
+
+        output.innerHTML =`You have gained ${profitPercent}% .You have made a total profit of ₹${profit}`;
+
+        stocksBackground.style.backgroundImage = "url('./images/celebration1_gif.gif')";
+
     }
     else{
         let loss = purchasePriceValue - currentPriceValue;
 
-        console.log(`loss of ${loss}`);
+        let lossPercent = ((loss/purchasePriceValue) * 100).toFixed(2);
+
+        output.innerHTML =`You lost ${lossPercent}%. Your total loss is ₹${loss}`;
+
+        if(lossPercent > 50){
+            stocksBackground.style.backgroundImage = "url('./images/sad_gif.gif')";
+
+            stocksBackground.style.backgroundRepeat = "no-repeat";
+
+            stocksBackground.style.backgroundSize = "cover";
+        }
     }
 
 });
