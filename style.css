@@ -4,6 +4,12 @@
 
 body{
     text-align: center;
+    background: linear-gradient(to right, #00f260, #0575e6);
+    color: white;
+}
+
+#stocks{
+    min-height: 100vh;
 }
 
 input, label{
@@ -17,23 +23,40 @@ input{
     border-bottom: 2px solid red;
 }
 
+label{
+    font-size: large;
+}
+
 #submit_btn{
     width: 10%;
     height: 7vh;
     font-weight: bold;
     margin: 20px;
+    margin-bottom: 0;
     border-radius: 10px;
     font-size: 1rem;
+}
+
+#output{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 40px;
+    color: black;
 }
 
 @media screen and (max-width:360px) {
     input{
         padding-left: 0;
         padding-right: 0;
+        margin-right: 0;
     }
 
     #submit_btn{
         width: 30%;
         float: left;
+    }
+
+    label{
+        font-size: 16px;
     }
 }
