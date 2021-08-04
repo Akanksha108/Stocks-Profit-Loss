@@ -45,6 +45,8 @@ submitBtn.addEventListener("click", function(event){
 
         let lossPercent = ((loss/purchasePriceValue) * 100).toFixed(2);
 
+
+         // Added Styles to output
         output.style.border = "2px solid #064E3B";
         output.style.background = "linear-gradient(to right, #00D956, #0468CD)";
         output.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 30px 90px";
