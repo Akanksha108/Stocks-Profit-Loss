@@ -12,6 +12,11 @@ let stocksBackground = document.getElementById("stocks");
 
 heroImg = document.getElementById("hero_img");
 
+stockLabel = document.getElementsByClassName("stock_label");
+
+stocksFormHeading = document.querySelector("#stocks_form_heading");
+console.log(stocksFormHeading);
+
 function celebration(){
     document.body.style.backgroundImage = "url('./images/pexels-olya-kobruseva-5386754.jpg'}";
 }
@@ -57,6 +62,12 @@ submitBtn.addEventListener("click", function(event){
 
         if(lossPercent > 50){
 
+            stocksFormHeading.style.color = "#e45959";
+
+            for(let i =0; i < stockLabel.length; i++){
+                stockLabel[i].style.color = "#e45959";
+            }
+
             heroImg.style.display = "none";
 
             stocksBackground.style.backgroundImage = "url('./images/sad_gif.gif')";
@@ -69,7 +80,7 @@ submitBtn.addEventListener("click", function(event){
 
             output.style.background = "black";
 
-            output.style.color = "white";
+            output.style.color = "#e45959";
 
             output.innerHTML =`You lost ${lossPercent}%. Your total loss is ₹${loss}`;
 
