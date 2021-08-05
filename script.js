@@ -32,12 +32,12 @@ submitBtn.addEventListener("click", function(event){
         output.style.background = "linear-gradient(to right, #00D956, #0468CD)";
         output.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 30px 90px";
        
-        output.innerHTML =`You have gained ${profitPercent}% .You have made a total profit of ₹${profit}`;
+        output.innerHTML =`You have gained ${profitPercent}% .Your total profit is ₹${profit}`;
 
         if(profitPercent > 50){
             stocksBackground.style.backgroundImage = "url('./images/celebration1_gif.gif')";
 
-            output.innerHTML =`You have gained ${profitPercent}% .You have made a total profit of ₹${profit}`;
+            output.innerHTML =`You have gained ${profitPercent}% .Your total profit is ₹${profit}`;
         }
     }
     else{
