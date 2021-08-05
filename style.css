@@ -150,3 +150,41 @@ label{
         margin-bottom: 10px;
     }
 }
+
+@media screen and (min-width:768px) {
+    .hero_img_container{
+        width: 430px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #hero_img{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .form_for_stocks{
+        width: 50%;
+    }
+
+    input{
+        margin-right: 0;
+    }
+
+    label{
+        font-size: 18px;
+        margin-left: 0;
+    }
+
+    #submit_btn{
+        width: 25%;
+    }
+
+    #output{
+        width: auto;
+        margin: 30px 10px 10px 10px;
+        padding: 20px;
+    }
+}
