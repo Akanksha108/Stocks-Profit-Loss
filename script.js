@@ -10,6 +10,8 @@ let output = document.getElementById("output");
 
 let stocksBackground = document.getElementById("stocks");
 
+heroImg = document.getElementById("hero_img");
+
 function celebration(){
     document.body.style.backgroundImage = "url('./images/pexels-olya-kobruseva-5386754.jpg'}";
 }
@@ -54,6 +56,9 @@ submitBtn.addEventListener("click", function(event){
         output.innerHTML =`You lost ${lossPercent}%. Your total loss is ₹${loss}`;
 
         if(lossPercent > 50){
+
+            heroImg.style.display = "none";
+
             stocksBackground.style.backgroundImage = "url('./images/sad_gif.gif')";
 
             stocksBackground.style.backgroundRepeat = "no-repeat";
