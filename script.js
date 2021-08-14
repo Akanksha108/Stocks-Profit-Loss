@@ -38,14 +38,11 @@ submitBtn.addEventListener("click", function(event){
         output.style.border = "2px solid #064E3B";
         output.style.background = "linear-gradient(to right, #00D956, #0468CD)";
         output.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 30px 90px";
-       
-        output.innerHTML =`You have gained ${profitPercent}% .Your total profit is ₹${profit}`;
 
         if(profitPercent > 50){
             stocksBackground.style.backgroundImage = "url('./images/celebration1_gif.gif')";
-
-            output.innerHTML =`You have gained ${profitPercent}% .Your total profit is ₹${profit}`;
         }
+        output.innerHTML =`You have gained ${profitPercent}% .Your total profit is ₹${profit}`;
     }
     else{
         let loss = purchasePriceValue - currentPriceValue;
@@ -57,8 +54,6 @@ submitBtn.addEventListener("click", function(event){
         output.style.border = "2px solid #064E3B";
         output.style.background = "linear-gradient(to right, #00D956, #0468CD)";
         output.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 30px 90px";
-
-        output.innerHTML =`You lost ${lossPercent}%. Your total loss is ₹${loss}`;
 
         if(lossPercent > 50){
 
@@ -76,15 +71,11 @@ submitBtn.addEventListener("click", function(event){
 
             stocksBackground.style.backgroundSize = "cover";
 
-            output.style.border = "2px solid #064E3B";
-
             output.style.background = "black";
 
             output.style.color = "#e45959";
-
-            output.innerHTML =`You lost ${lossPercent}%. Your total loss is ₹${loss}`;
-
         }
+        output.innerHTML =`You lost ${lossPercent}%. Your total loss is ₹${loss}`;
     }
 
 });
