@@ -174,11 +174,8 @@ label{
         padding: 20px;
         font-weight: bold;
         font-size: 1.5rem;
-        padding-top: 40px;
         color: black;
-        display: block;
-        margin: auto;
-        margin-top: 30px;
+        margin: 20px;
     }
 }
 
