@@ -179,6 +179,16 @@ label{
     }
 }
 
+@media screen and (min-width: 1020px) {
+    .stock_label{
+        font-size: 1.5rem;
+    }
+
+    input{
+        font-size: 1rem;
+    }
+}
+
 @media screen and (min-width: 1400px) {
     #stocks_form_heading{
         font-size: 3rem;
